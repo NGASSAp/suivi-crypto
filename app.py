@@ -14,12 +14,12 @@ def chargement_donnees():
     }
 
     # envoie de la commande
-    
+
     reponse = req.get (url, params = parametres)            
 
     # transformation de JSON reçu en tableau
 
-    return pd.DataFrame(reponse.json())
+    return pd.DataFrame(reponse.json())     # l'API répond avec du texte brut (JSON). Pandas le transforme immédiatement en un tableau organisé avec des lignes et des colonnes
 
 # récupération des données brutes
 
